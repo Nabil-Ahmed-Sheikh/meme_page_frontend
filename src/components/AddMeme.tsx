@@ -10,10 +10,9 @@ type Props = {
 
 
 const AddMeme:React.FC<Props> = ({addURL, setImage}) => {
-    console.log(typeof addURL);
+   
     
     const [url, setUrl] = useState("");
-    const [memeFile, setMemeFile] = useState(null);
 
     const [show, setShow] = useState(false);
 
@@ -44,7 +43,7 @@ const AddMeme:React.FC<Props> = ({addURL, setImage}) => {
                             ></Form.Control>
                             </Col>
                             <Col style={{ paddingLeft: 1, paddingRight: 0 }} sm={4}>
-                            <Button type="submit" variant="outline-success" className="p-2">
+                            <Button type="submit" variant="outline-success" className="p-2 w-100">
                                 Add Meme
                             </Button>
                             </Col>

@@ -9,7 +9,7 @@ const Chart = () => {
     const [stats, setStats] = useState([])
     useEffect( () => {
         async function fetchStats() {
-            const { data } = await axios.get(`/api/meme/stats`)
+            const { data } = await axios.get(`https://meme-page-headless-tech-ltd.herokuapp.com/api/meme/stats`)
             setStats(data);
         }
         fetchStats();

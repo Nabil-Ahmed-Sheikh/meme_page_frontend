@@ -26,7 +26,7 @@ const UploadModal: React.FC<Props> = ({show, handleClose, setImage}) => {
             },
           };
     
-          const { data } = await axios.post("/api/meme/upload", formData, config);
+          const { data } = await axios.post("https://meme-page-headless-tech-ltd.herokuapp.com/api/meme/upload", formData, config);
           setImage(data);
           setUploading(false);
         } catch (error) {

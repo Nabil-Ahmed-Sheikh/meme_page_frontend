@@ -17,7 +17,7 @@ export const getMemes = () =>
     try {
       dispatch({ type: FETCH_MEMES_REQUEST });
 
-      const { data } = await axios.get(`/api/meme`);
+      const { data } = await axios.get(`https://meme-page-headless-tech-ltd.herokuapp.com/api/meme`);
 
       dispatch({
         type: FETCH_MEMES_SUCCESS,
@@ -39,7 +39,7 @@ async (dispatch:any) => {
   try {
     dispatch({ type: DELETE_MEMES_REQUEST });
 
-    await axios.delete(`/api/meme/${id}`);
+    await axios.delete(`https://meme-page-headless-tech-ltd.herokuapp.com/api/meme/${id}`);
 
     dispatch({
       type: DELETE_MEMES_SUCCESS
@@ -62,7 +62,7 @@ async (dispatch:any) => {
     const reqBody= {
       url: url
     }
-    await axios.post(`/api/meme/`, reqBody);
+    await axios.post(`https://meme-page-headless-tech-ltd.herokuapp.com/api/meme/`, reqBody);
 
     dispatch({
       type: ADD_URL_SUCCESS
